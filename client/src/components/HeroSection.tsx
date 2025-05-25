@@ -13,7 +13,7 @@ export default function HeroSection() {
           />
         </div>
         <h1 className="text-4xl md:text-6xl font-bold mb-4">KISYANGA FC</h1>
-        <p className="text-xl md:text-2xl mb-8 text-secondary font-semibold">Golden Bisya | Brotherhood, Grit & Glory</p>
+        <p className="text-xl md:text-2xl mb-8 text-secondary font-semibold">Golden Basya | Brotherhood, Grit & Glory</p>
         <p className="max-w-2xl mx-auto mb-8 text-lg">
           Founded in 2006 during Ntare School's Golden Jubilee, Kisyanga FC embodies the spirit of brotherhood, 
           resilience, and community that defines our alumni league.

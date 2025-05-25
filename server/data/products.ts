@@ -23,7 +23,7 @@ export const productsData = [
   {
     id: 4,
     name: 'Kisyanga FC Mug',
-    description: 'Golden Bisya Coffee Mug',
+    description: 'Golden Basya Coffee Mug',
     price: 'UGX 55,000',
     image: 'https://pixabay.com/get/g43bd91cb52a23c34c975670489f0232bee56de54a99f606ca0377cdea94a175107f3697a05918bb6a33730ca86558e8620e80d16aa27975616d9450f3f1e2c4c_1280.jpg'
   }

@@ -15,7 +15,7 @@ export const historyData = [
     id: 3,
     year: '2015',
     title: 'First Championship',
-    description: 'The Golden Bisya claimed their first Ntare Lions League title after an unbeaten run in the season. Mc Jim was named Player of the Season after scoring 14 goals in 10 matches.'
+    description: 'The Golden Basya claimed their first Ntare Lions League title after an unbeaten run in the season. Mc Jim was named Player of the Season after scoring 14 goals in 10 matches.'
   },
   {
     id: 4,

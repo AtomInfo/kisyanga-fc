@@ -22,7 +22,7 @@ Use dummy JSON or mock database for dynamic sections (team, fixtures, news)
 Deployment-ready on Replit
 
 🌍 Club Background
-Kisyanga FC was founded in 2006, coinciding with the Golden Jubilee of Ntare School — hence the nickname "Golden Bisya". Named after a beloved millet porridge that fueled many school nights, the club symbolizes brotherhood, resilience, and community.
+Kisyanga FC was founded in 2006, coinciding with the Golden Jubilee of Ntare School — hence the nickname "Golden Basya". Named after a beloved millet porridge that fueled many school nights, the club symbolizes brotherhood, resilience, and community.
 
 We joined the Ntare Lions League in 2014, reaching the final in our debut season and clinching our first title soon after. We're now on a mission to reclaim glory while building a digital presence.
 
@@ -51,7 +51,7 @@ Edit
 🏠 Homepage
 Hero title: Kisyanga FC
 
-Tagline: “Golden Bisya | Brotherhood, Grit & Glory”
+Tagline: “Golden Basya | Brotherhood, Grit & Glory”
 
 Background image or video (use placeholder)
 

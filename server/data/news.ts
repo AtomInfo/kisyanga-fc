@@ -4,7 +4,7 @@ export const newsData = [
     title: 'Kisyanga FC Triumphs in Derby Match Against Eagle Squad',
     date: 'May 2, 2023',
     category: 'Match Report',
-    description: 'Mc Jim\'s double and Nue-ha\'s stunning free-kick secured a convincing 3-1 victory for the Golden Bisya in Sunday\'s heated derby.',
+    description: 'Mc Jim\'s double and Nue-ha\'s stunning free-kick secured a convincing 3-1 victory for the Golden Basya in Sunday\'s heated derby.',
     image: 'https://pixabay.com/get/g78efb2531034606fc119c4f0fadd2e54cccb89653648073d7eb3927c5ad1b0c09990d5b6fcedb88305a9a42e50ebbbe4721ffeecd5cfed9d228702dc364c9c2a_1280.jpg'
   },
   {

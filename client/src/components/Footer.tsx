@@ -26,7 +26,7 @@ export default function Footer() {
               <span className="font-bold text-xl">Kisyanga FC</span>
             </div>
             <p className="text-gray-300 mb-4">
-              Brotherhood, Grit & Glory since 2006. The Golden Bisya represents the spirit of unity and resilience.
+              Brotherhood, Grit & Glory since 2006. The Golden Basya represents the spirit of unity and resilience.
             </p>
             <div className="flex space-x-4">
               <a href="https://instagram.com/kisyanga_fc" className="text-gray-300 hover:text-secondary transition">
@@ -107,7 +107,7 @@ export default function Footer() {
         <div className="border-t border-gray-700 mt-8 pt-6 flex flex-col md:flex-row justify-between items-center">
           <p className="text-gray-400">© 2023 Kisyanga FC. All rights reserved.</p>
           <div className="flex flex-col items-center md:items-end">
-            <p className="text-gray-400 mt-2 md:mt-0">Designed and developed with <i className="fas fa-heart text-secondary"></i> for the Golden Bisya</p>
+            <p className="text-gray-400 mt-2 md:mt-0">Designed and developed with <i className="fas fa-heart text-secondary"></i> for the Golden Basya</p>
             <p className="text-gray-400 text-sm mt-1">Designed by Atom Software Solutions</p>
           </div>
         </div>
