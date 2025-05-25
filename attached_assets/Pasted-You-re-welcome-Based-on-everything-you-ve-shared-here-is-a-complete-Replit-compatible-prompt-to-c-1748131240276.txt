@@ -1,0 +1,148 @@
+You're welcome! Based on everything you've shared, here is a complete, Replit-compatible prompt to create a Kisyanga FC website. It includes all your requested details: tech stack, content guidance, structure, and club context.
+
+✅ Final Replit Prompt: Kisyanga FC Website (React + Node.js)
+🛠 Project Goal
+Create a full-featured, responsive website for Kisyanga FC, a football club competing in Uganda’s Ntare Lions League. The website should highlight the club’s spirit, players, history, matches, and merchandise. This is both a hub for fans and a showcase for the club's legacy and future.
+
+🔧 Tech Stack Requirements
+Frontend:
+
+ReactJS (use functional components only)
+
+Tailwind CSS (preferred) or Bootstrap
+
+Clean component structure with modular design
+
+Backend:
+
+Node.js + Express (set up basic API routes)
+
+Use dummy JSON or mock database for dynamic sections (team, fixtures, news)
+
+Deployment-ready on Replit
+
+🌍 Club Background
+Kisyanga FC was founded in 2006, coinciding with the Golden Jubilee of Ntare School — hence the nickname "Golden Bisya". Named after a beloved millet porridge that fueled many school nights, the club symbolizes brotherhood, resilience, and community.
+
+We joined the Ntare Lions League in 2014, reaching the final in our debut season and clinching our first title soon after. We're now on a mission to reclaim glory while building a digital presence.
+
+The Ntare Lions League is Uganda’s premier Sunday league for alumni of Ntare School, promoting camaraderie, fitness, and networking among Old Boys.
+
+📁 Project Structure
+bash
+Copy
+Edit
+/client
+  ├── src/
+  │   ├── components/     # Navbar, Footer, PlayerCard, etc.
+  │   ├── pages/          # Home, Team, Fixtures, News, etc.
+  │   ├── App.js
+  │   └── index.js
+  └── tailwind.config.js
+
+/server
+  ├── routes/
+  │   └── api.js          # Express routes for players, fixtures, etc.
+  ├── data/
+  │   └── mockData.json   # Temporary data source
+  ├── app.js
+  └── index.js
+🧩 Pages & Content Requirements
+🏠 Homepage
+Hero title: Kisyanga FC
+
+Tagline: “Golden Bisya | Brotherhood, Grit & Glory”
+
+Background image or video (use placeholder)
+
+Short description from club history
+
+Call to action buttons: "See Team", "View Fixtures", "Shop Now"
+
+🎥 Trending Video
+Embed a placeholder video (YouTube or local)
+
+🛍️ Shop Now
+Display product cards (jerseys, mugs, etc.)
+
+Each card should show "Coming Soon" label
+
+Optional: allow product filtering later
+
+📰 Latest News
+List 2–3 mock news items with:
+
+Title
+
+Date
+
+Short description
+
+"Read more" link (optional)
+
+👥 Team
+List of current players with:
+
+Full name
+
+Nickname (if any)
+
+Position (e.g., Striker, Midfielder)
+
+Player ranking
+
+Highlight key players from past and present:
+
+Mc Jim (G.O.A.T), Nue-ha (Messi), Elly, Seth, etc.
+
+🏟️ Fixtures / Results
+Display:
+
+Upcoming matches (with date, opponent, location)
+
+Past matches (with result, date, score)
+
+Separate or filterable view (Upcoming vs Results)
+
+🕰️ History
+Timeline or card layout with:
+
+Year
+
+Key event (e.g., "2014 - Joined Lions League", "2015 - Won 1st title")
+
+🖼️ Gallery
+Image grid or carousel
+
+Use placeholder images (nature, jerseys, matchday, fans)
+
+🤝 Sponsors
+Grid or slider with logos
+
+Use image placeholders with captions like "Official Sponsor"
+
+📞 Contact & Footer
+Contact form:
+
+Name, Email, Message (no backend submission required)
+
+Contact info:
+
+Instagram: @kisyanga_fc
+
+Twitter: @kisyangafc
+
+Optional Google Maps placeholder
+
+Footer with social links & copyright
+
+🎨 Design Guidelines
+Colors: Deep green, gold, white
+
+Typography: Bold headers, clear body text
+
+Layout: Clean, modern, calming
+
+Animations: Subtle transitions on hover/scroll
+
+Responsiveness: Mobile-first, must look great on all screen sizes

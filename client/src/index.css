@@ -1,0 +1,79 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: 0 0% 100%;
+  --foreground: 20 14.3% 4.1%;
+  --muted: 60 4.8% 95.9%;
+  --muted-foreground: 25 5.3% 44.7%;
+  --popover: 0 0% 100%;
+  --popover-foreground: 20 14.3% 4.1%;
+  --card: 0 0% 100%;
+  --card-foreground: 20 14.3% 4.1%;
+  --border: 20 5.9% 90%;
+  --input: 20 5.9% 90%;
+  --primary: 147 79% 16%; /* #0A4A2F deep green */
+  --primary-foreground: 0 0% 100%; /* white */
+  --secondary: 50 100% 50%; /* #FFD700 gold */
+  --secondary-foreground: 147 79% 16%; /* #0A4A2F deep green */
+  --accent: 43 100% 49%; /* #DAA520 golden accent */
+  --accent-foreground: 0 0% 100%; /* white */
+  --destructive: 0 84.2% 60.2%;
+  --destructive-foreground: 60 9.1% 97.8%;
+  --ring: 20 14.3% 4.1%;
+  --radius: 0.5rem;
+  
+  --chart-1: 147 79% 16%;
+  --chart-2: 50 100% 50%;
+  --chart-3: 43 100% 49%;
+  --chart-4: 0 0% 90%;
+  --chart-5: 0 0% 70%;
+}
+
+.dark {
+  --background: 240 10% 3.9%;
+  --foreground: 0 0% 98%;
+  --muted: 240 3.7% 15.9%;
+  --muted-foreground: 240 5% 64.9%;
+  --popover: 240 10% 3.9%;
+  --popover-foreground: 0 0% 98%;
+  --card: 240 10% 3.9%;
+  --card-foreground: 0 0% 98%;
+  --border: 240 3.7% 15.9%;
+  --input: 240 3.7% 15.9%;
+  --primary: 147 79% 16%; /* keeping primary consistent */
+  --primary-foreground: 0 0% 100%;
+  --secondary: 50 100% 50%; /* keeping secondary consistent */
+  --secondary-foreground: 147 79% 16%;
+  --accent: 43 100% 49%; /* keeping accent consistent */
+  --accent-foreground: 0 0% 98%;
+  --destructive: 0 62.8% 30.6%;
+  --destructive-foreground: 0 0% 98%;
+  --ring: 240 4.9% 83.9%;
+  --radius: 0.5rem;
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply font-sans antialiased bg-background text-foreground;
+  }
+}
+
+.hero-section {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('https://images.unsplash.com/photo-1543326727-cf6c39e8f84c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1920&h=1080');
+  background-size: cover;
+  background-position: center;
+}
+
+.active-tab {
+  @apply bg-primary text-white;
+}
+
+.inactive-tab {
+  @apply bg-gray-200 text-gray-800;
+}
