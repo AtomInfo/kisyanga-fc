@@ -39,9 +39,14 @@ app.use((req, res, next) => {
 
 (async () => {
   try {
-    // Seed the database with initial data
-    await storage.seedDatabase();
-    log("Database initialized successfully");
+    // Try to seed the database with initial data
+    try {
+      await storage.seedDatabase();
+      log("Database initialized successfully");
+    } catch (dbError) {
+      log("Database seeding failed, continuing without seeding: " + dbError.message);
+      // Continue startup even if database seeding fails
+    }
 
     const server = await registerRoutes(app);
 
