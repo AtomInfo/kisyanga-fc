@@ -25,5 +25,5 @@ try {
 
 export { pool };
 export const db = drizzle(pool, { schema });
-// export const pool = new Pool({ connectionString: process.env.VITE_DATABASE_URL });
+// export const pool = new Pool({ connectionString: process.env.DATABASE_URL });
 // export const db = drizzle(pool, { schema });
