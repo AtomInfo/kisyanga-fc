@@ -3,19 +3,19 @@ export default function TrendingVideo() {
     {
       id: 1,
       title: "Match Highlights: Kisyanga FC vs. Lions United",
-      thumbnail: "https://images.unsplash.com/photo-1431324155629-1a6deb1dec8d?w=400&h=300&fit=crop&crop=center",
+      thumbnail: "https://images.unsplash.com/photo-1626248801379-51a0748a5f96?w=400&h=300&fit=crop&crop=center",
       date: "May 1, 2023"
     },
     {
       id: 2,
       title: "Team Training Session",
-      thumbnail: "https://images.unsplash.com/photo-1579952363873-27d3bfad9c0d?w=400&h=300&fit=crop&crop=center",
+      thumbnail: "https://images.unsplash.com/photo-1431324155629-1a6deb1dec8d?w=400&h=300&fit=crop&crop=center",
       date: "April 28, 2023"
     },
     {
       id: 3,
       title: "Player Interview: Mc Jim",
-      thumbnail: "https://images.unsplash.com/photo-1594736797933-d0dba2b83495?w=400&h=300&fit=crop&crop=center",
+      thumbnail: "https://images.unsplash.com/photo-1704665246322-494e21fdc02f?w=400&h=300&fit=crop&crop=center",
       date: "April 25, 2023"
     }
   ];

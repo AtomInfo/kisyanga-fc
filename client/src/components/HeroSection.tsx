@@ -3,7 +3,7 @@ import kisyangaLogo from '../assets/kisyanga-logo.jpg';
 
 export default function HeroSection() {
   return (
-    <section id="home" className="hero-section h-[85vh] flex items-center justify-center text-white">
+    <section id="home" className="hero-section h-[95vh] flex items-center justify-center text-white">
       <div className="container mx-auto px-4 text-center">
         <div className="flex justify-center mb-6">
           <img 
@@ -14,7 +14,7 @@ export default function HeroSection() {
         </div>
         <h1 className="text-4xl md:text-6xl font-bold mb-4">KISYANGA FC</h1>
         <p className="text-xl md:text-2xl mb-8 text-secondary font-semibold">Golden Basya | Brotherhood, Grit & Glory</p>
-        {import.meta.env.VITE_DATABASE_URL + " Joel"}
+        {/* {import.meta.env.VITE_DATABASE_URL + " Joel"} */}
         <p className="max-w-2xl mx-auto mb-8 text-lg">
           Founded in 2006 during Ntare School's Golden Jubilee, Kisyanga FC embodies the spirit of brotherhood, 
           resilience, and community that defines our alumni league.
