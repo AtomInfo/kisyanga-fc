@@ -3,15 +3,15 @@ import { Pool } from "pg";
 import { drizzle } from "drizzle-orm/node-postgres";
 import * as schema from "@shared/schema";
 
-if (!process.env.VITE_DATABASE_URL) {
+if (!process.env.DATABASE_URL) {
   throw new Error(
-    "VITE_DATABASE_URL must be set. Did you forget to provision a database?",
+    "DATABASE_URL must be set. Did you forget to provision a database?",
   );
 }
 
 let pool: Pool;
 try {
-  pool = new Pool({ connectionString: process.env.VITE_DATABASE_URL });
+  pool = new Pool({ connectionString: process.env.DATABASE_URL });
   // Test the connection immediately
   pool.query('SELECT 1').then(() => {
     console.log('Database connection successful.');
