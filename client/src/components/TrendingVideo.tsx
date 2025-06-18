@@ -3,19 +3,19 @@ export default function TrendingVideo() {
     {
       id: 1,
       title: "Match Highlights: Kisyanga FC vs. Lions United",
-      thumbnail: "https://pixabay.com/get/g878a9a88752012412396a52754657012b7ed2f99f166748891be602271c5c2bff2798109f0bc999fee6c9f7b79b4f6db02a01105276548a4f670f074b101e3f1_1280.jpg",
+      thumbnail: "https://images.unsplash.com/photo-1431324155629-1a6deb1dec8d?w=400&h=300&fit=crop&crop=center",
       date: "May 1, 2023"
     },
     {
       id: 2,
       title: "Team Training Session",
-      thumbnail: "https://pixabay.com/get/g717647c2160ea40adee64d5dbdf3ffd195e9c770500dd942d032a28a7d13ea7f6c834d94e6d7402b0694f128acac8f6f35b9f2e2e10f9d362f7d26baddcb9cff_1280.jpg",
+      thumbnail: "https://images.unsplash.com/photo-1579952363873-27d3bfad9c0d?w=400&h=300&fit=crop&crop=center",
       date: "April 28, 2023"
     },
     {
       id: 3,
       title: "Player Interview: Mc Jim",
-      thumbnail: "https://pixabay.com/get/gcf4f7b5d3b6cbf55b9e6cd04ca9198bde782312e11776e5f62a7dfc7f10c89ee07ddd4a5069d94ce4c82892b81c0f4a099b69c671db0c8d8388f6cd93e697e23_1280.jpg",
+      thumbnail: "https://images.unsplash.com/photo-1594736797933-d0dba2b83495?w=400&h=300&fit=crop&crop=center",
       date: "April 25, 2023"
     }
   ];
