@@ -1,7 +1,6 @@
 import express, { type Request, Response, NextFunction } from "express";
 import { registerRoutes } from "./routes";
 import { setupVite, serveStatic, log } from "./vite";
-import { storage } from "./storage";
 
 const app = express();
 app.use(express.json());
@@ -39,15 +38,7 @@ app.use((req, res, next) => {
 
 (async () => {
   try {
-    // Try to seed the database with initial data
-    try {
-      await storage.seedDatabase();
-      log("Database initialized successfully");
-    } catch (dbError) {
-      log("Database seeding failed, continuing without seeding: " + dbError.message);
-      // Continue startup even if database seeding fails
-    }
-
+    log("Server starting with file-based data");
     const server = await registerRoutes(app);
 
     app.use((err: any, _req: Request, res: Response, _next: NextFunction) => {
