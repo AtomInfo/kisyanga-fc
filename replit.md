@@ -15,10 +15,10 @@ Kisyanga FC is a full-stack web application built for a football club competing 
 
 ### Backend Architecture
 - **Runtime**: Node.js with Express.js framework
-- **Database**: PostgreSQL with Drizzle ORM for type-safe database operations
-- **API Design**: RESTful API endpoints with Express routes
+- **Data Storage**: File-based data serving from server/data directory
+- **API Design**: RESTful API endpoints with Express routes serving static data
 - **Development**: Hot reloading with Vite middleware integration
-- **Data Seeding**: Automated database initialization with sample data
+- **Performance**: Direct file imports for fast response times (0-5ms)
 
 ### Deployment Strategy
 - **Platform**: Replit with autoscale deployment target
@@ -28,16 +28,15 @@ Kisyanga FC is a full-stack web application built for a football club competing 
 
 ## Key Components
 
-### Database Schema
-The application uses a PostgreSQL database with the following main tables:
-- **users**: Authentication system (future implementation)
-- **players**: Team member profiles with ratings and positions
-- **fixtures**: Match schedules and results
-- **news**: Club announcements and match reports
-- **history**: Significant club milestones
-- **gallery**: Photo collection from matches and events
-- **products**: Merchandise catalog
-- **sponsors**: Partner organizations
+### Data Structure
+The application uses file-based data storage with the following data files:
+- **server/data/players.ts**: Team member profiles with ratings and positions
+- **server/data/fixtures.ts**: Match schedules and results
+- **server/data/news.ts**: Club announcements and match reports
+- **server/data/history.ts**: Significant club milestones
+- **server/data/gallery.ts**: Photo collection from matches and events
+- **server/data/products.ts**: Merchandise catalog
+- **server/data/sponsors.ts**: Partner organizations
 
 ### API Endpoints
 - `GET /api/players` - Retrieve all team members
@@ -65,9 +64,9 @@ The application uses a PostgreSQL database with the following main tables:
 ### Client-Server Communication
 1. React components use TanStack Query hooks to fetch data
 2. Query client manages caching, background updates, and error handling
-3. API requests are made to Express endpoints with credentials included
-4. Server queries PostgreSQL database using Drizzle ORM
-5. Responses are cached client-side for optimal performance
+3. API requests are made to Express endpoints serving static data
+4. Server returns data directly from imported TypeScript files
+5. Responses are cached client-side with fast server response times (0-5ms)
 
 ### State Management
 - Server state managed by TanStack Query with intelligent caching
@@ -79,9 +78,7 @@ The application uses a PostgreSQL database with the following main tables:
 
 ### Production Dependencies
 - **@tanstack/react-query**: Server state management and caching
-- **drizzle-orm**: Type-safe database ORM with PostgreSQL adapter
-- **express**: Web application framework
-- **pg**: PostgreSQL client for Node.js
+- **express**: Web application framework for API routes
 - **wouter**: Lightweight client-side routing
 - **@radix-ui/react-***: Accessible UI component primitives
 - **tailwindcss**: Utility-first CSS framework
@@ -93,7 +90,6 @@ The application uses a PostgreSQL database with the following main tables:
 - **typescript**: Type checking and compilation
 - **tsx**: TypeScript execution for Node.js
 - **esbuild**: Fast bundler for server code
-- **drizzle-kit**: Database migration and schema management
 
 ### Asset Sources
 - Images sourced from Pixabay and Unsplash for demo content
@@ -103,26 +99,29 @@ The application uses a PostgreSQL database with the following main tables:
 ## Deployment Strategy
 
 ### Development Environment
-- Replit provides integrated development with PostgreSQL database
+- Replit provides integrated development environment
 - Hot reloading enabled through Vite middleware
-- Environment variables managed through Replit secrets
 - Development server runs on port 5000 with proxy configuration
+- File-based data ensures fast startup and response times
 
 ### Production Deployment
 - Automated build process compiles both frontend and backend
 - Static assets served from dist directory
-- Database migrations applied through Drizzle Kit
+- No database dependencies for simplified deployment
 - Autoscale deployment handles traffic variations
 - HTTPS termination handled by Replit infrastructure
 
-### Database Management
-- Schema defined in TypeScript with Drizzle ORM
-- Migrations generated and applied automatically
-- Seed data provides realistic content for demonstration
-- Connection pooling optimizes database performance
+### Data Management
+- All data stored in TypeScript files for type safety
+- Images sourced from reliable Unsplash URLs
+- No database setup or migrations required
+- Instant startup with direct file imports
 
 ## Changelog
-- June 16, 2025. Initial setup
+- June 18, 2025: Removed database dependency, migrated to file-based data storage
+- June 18, 2025: Fixed all broken images with working Unsplash URLs
+- June 18, 2025: Successfully migrated from Replit Agent to standard Replit environment
+- June 16, 2025: Initial setup
 
 ## User Preferences
 Preferred communication style: Simple, everyday language.
