@@ -124,16 +124,16 @@ export default function ContactSection() {
               <div className="mt-8">
                 <h4 className="font-semibold mb-4">Follow Us</h4>
                 <div className="flex space-x-4">
-                  <a href="https://instagram.com/kisyanga_fc" className="w-10 h-10 bg-primary text-white rounded-full flex items-center justify-center hover:bg-accent transition">
+                  <a target="_blank" href="https://instagram.com/kisyanga_fc" className="w-10 h-10 bg-primary text-white rounded-full flex items-center justify-center hover:bg-accent transition">
                     <i className="fab fa-instagram"></i>
                   </a>
-                  <a href="https://twitter.com/kisyangafc" className="w-10 h-10 bg-primary text-white rounded-full flex items-center justify-center hover:bg-accent transition">
+                  <a target="_blank" href="https://twitter.com/kisyangafc" className="w-10 h-10 bg-primary text-white rounded-full flex items-center justify-center hover:bg-accent transition">
                     <i className="fab fa-twitter"></i>
                   </a>
-                  <a href="#" className="w-10 h-10 bg-primary text-white rounded-full flex items-center justify-center hover:bg-accent transition">
+                  <a target="_blank" href="#" className="w-10 h-10 bg-primary text-white rounded-full flex items-center justify-center hover:bg-accent transition">
                     <i className="fab fa-facebook-f"></i>
                   </a>
-                  <a href="#" className="w-10 h-10 bg-primary text-white rounded-full flex items-center justify-center hover:bg-accent transition">
+                  <a target="_blank" href="#" className="w-10 h-10 bg-primary text-white rounded-full flex items-center justify-center hover:bg-accent transition">
                     <i className="fab fa-youtube"></i>
                   </a>
                 </div>

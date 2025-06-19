@@ -2,21 +2,21 @@ export const sponsorsData = [
   {
     id: 1,
     name: 'S1',
-    type: 'Main Sponsor'
+    type: 'FootNote Consults'
   },
   {
     id: 2,
     name: 'S2',
-    type: 'Kit Partner'
+    type: 'Atom Software Solutions'
   },
   {
     id: 3,
     name: 'S3',
-    type: 'Technology Partner'
+    type: 'Atom Software Solutions'
   },
   {
     id: 4,
     name: 'S4',
-    type: 'Community Partner'
+    type: 'Travel Trek Safaris'
   }
 ];
