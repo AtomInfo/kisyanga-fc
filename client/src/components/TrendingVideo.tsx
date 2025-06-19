@@ -2,7 +2,7 @@ export default function TrendingVideo() {
   const videos = [
     {
       id: 1,
-      title: "Match Highlights: Kisyanga FC vs. Lions United",
+      title: "Match Highlights: Kisyanga FC vs. Nshera FC",
       thumbnail: "https://images.unsplash.com/photo-1626248801379-51a0748a5f96?w=400&h=300&fit=crop&crop=center",
       date: "May 1, 2023"
     },

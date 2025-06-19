@@ -21,7 +21,7 @@ export default function Home() {
       <FixturesSection />
       <NewsSection />
       <HistorySection />
-      <GallerySection />
+      {/* <GallerySection /> */}
       <ShopSection />
       <SponsorsSection />
       <ContactSection />

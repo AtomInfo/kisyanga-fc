@@ -1,12 +1,12 @@
 import type { Express } from "express";
 import { createServer, type Server } from "http";
-import { playersData } from "./data/players";
-import { fixturesData } from "./data/fixtures";
-import { newsData } from "./data/news";
-import { historyData } from "./data/history";
-import { galleryData } from "./data/gallery";
-import { productsData } from "./data/products";
-import { sponsorsData } from "./data/sponsors";
+import { newsData } from "@/data/news";
+import { playersData } from "@/data/players";
+import { fixturesData } from "@/data/fixtures";
+import { historyData } from "@/data/history";
+import { galleryData } from "@/data/gallery";
+import { productsData } from "@/data/products";
+import { sponsorsData } from "@/data/sponsors";
 
 export async function registerRoutes(app: Express): Promise<Server> {
   // prefix all routes with /api
