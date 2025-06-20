@@ -11,8 +11,8 @@ export const fixturesData = [
       logo: ''
     },
     awayTeam: {
-      name: 'Lions United',
-      shortName: 'LU',
+      name: 'Bonshe FC',
+      shortName: 'BFC',
       logo: ''
     },
     matchday: 8,
@@ -24,8 +24,8 @@ export const fixturesData = [
     date: 'Sunday, May 22, 2023',
     time: '4:00 PM',
     homeTeam: {
-      name: 'Thunder Stars',
-      shortName: 'TS',
+      name: 'Mugudu FC',
+      shortName: 'MFC',
       logo: ''
     },
     awayTeam: {
@@ -48,8 +48,8 @@ export const fixturesData = [
       logo: ''
     },
     awayTeam: {
-      name: 'Eagle Squad',
-      shortName: 'ES',
+      name: 'FC Kabali',
+      shortName: 'FCK',
       logo: ''
     },
     homeScore: 3,
@@ -64,8 +64,8 @@ export const fixturesData = [
     type: 'result',
     date: 'Sunday, April 24, 2023',
     homeTeam: {
-      name: 'Royal Lions',
-      shortName: 'RL',
+      name: 'Kajogo FC',
+      shortName: 'KAJ',
       logo: ''
     },
     awayTeam: {

@@ -1,3 +1,4 @@
+import { playersData } from '@/data/players';
 import { useQuery } from '@tanstack/react-query';
 
 interface Player {
@@ -36,7 +37,7 @@ export default function TeamSection() {
               </div>
             ))
           ) : (
-            players?.map((player) => (
+            playersData?.map((player) => (
               <div key={player.id} className="bg-white rounded-lg overflow-hidden shadow-md transition transform hover:-translate-y-1 hover:shadow-xl">
                 <img 
                   src={player.image} 

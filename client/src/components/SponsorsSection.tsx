@@ -1,5 +1,6 @@
 import { useQuery } from '@tanstack/react-query';
 import { scrollToSection } from '@/lib/utils';
+import { sponsorsData } from '@/data/sponsors';
 
 interface Sponsor {
   id: number;
@@ -32,7 +33,7 @@ export default function SponsorsSection() {
               </div>
             ))
           ) : (
-            sponsors?.map((sponsor) => (
+            sponsorsData?.map((sponsor) => (
               <div key={sponsor.id} className="bg-white p-6 rounded-lg shadow-md flex items-center justify-center h-32">
                 <div className="text-center">
                   <div className="w-16 h-16 bg-gray-200 rounded-full flex items-center justify-center mx-auto mb-2">

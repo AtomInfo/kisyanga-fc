@@ -1,3 +1,4 @@
+import { productsData } from '@/data/products';
 import { useQuery } from '@tanstack/react-query';
 import { useState } from 'react';
 
@@ -46,7 +47,7 @@ export default function ShopSection() {
               </div>
             ))
           ) : (
-            products?.map((product) => (
+            productsData?.map((product) => (
               <div key={product.id} className="bg-gray-100 rounded-lg overflow-hidden shadow-md transition transform hover:-translate-y-1 hover:shadow-xl relative">
                 <span className="absolute top-4 right-4 bg-secondary text-primary text-xs px-3 py-1 rounded-full font-bold">Coming Soon</span>
                 <img 

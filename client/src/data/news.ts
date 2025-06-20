@@ -1,7 +1,7 @@
 export const newsData = [
   {
     id: 1,
-    title: 'Kisyanga FC Triumphs in Derby Match Against Eagle Squad',
+    title: 'Kisyanga FC Triumphs in Derby Match Against Nshera FC',
     date: 'May 2, 2023',
     category: 'Match Report',
     description: 'Mc Jim\'s double and Nue-ha\'s stunning free-kick secured a convincing 3-1 victory for the Golden Basya in Sunday\'s heated derby.',

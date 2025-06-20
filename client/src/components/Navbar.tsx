@@ -49,7 +49,7 @@ export default function Navbar() {
               { id: 'fixtures', label: 'Fixtures' },
               { id: 'news', label: 'News' },
               { id: 'history', label: 'History' },
-              { id: 'gallery', label: 'Gallery' },
+              // { id: 'gallery', label: 'Gallery' },
               { id: 'shop', label: 'Shop' },
               { id: 'contact', label: 'Contact' }
             ].map((item) => (
@@ -82,7 +82,7 @@ export default function Navbar() {
               { id: 'fixtures', label: 'Fixtures' },
               { id: 'news', label: 'News' },
               { id: 'history', label: 'History' },
-              { id: 'gallery', label: 'Gallery' },
+              // { id: 'gallery', label: 'Gallery' },
               { id: 'shop', label: 'Shop' },
               { id: 'contact', label: 'Contact' }
             ].map((item) => (

@@ -1,3 +1,4 @@
+import { fixturesData } from '@/data/fixtures';
 import { useQuery } from '@tanstack/react-query';
 import { useState } from 'react';
 
@@ -31,8 +32,8 @@ export default function FixturesSection() {
     queryKey: ['/api/fixtures'],
   });
 
-  const upcomingFixtures = fixtures?.filter(fixture => fixture.type === 'upcoming') || [];
-  const resultFixtures = fixtures?.filter(fixture => fixture.type === 'result') || [];
+  const upcomingFixtures = fixturesData?.filter(fixture => fixture.type === 'upcoming') || [];
+  const resultFixtures = fixturesData?.filter(fixture => fixture.type === 'result') || [];
 
   return (
     <section id="fixtures" className="py-12 md:py-16 bg-white">

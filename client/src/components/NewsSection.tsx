@@ -1,3 +1,4 @@
+import { newsData } from '@/data/news';
 import { useQuery } from '@tanstack/react-query';
 
 interface NewsItem {
@@ -36,7 +37,7 @@ export default function NewsSection() {
               </div>
             ))
           ) : (
-            news?.map((item) => (
+            newsData?.map((item) => (
               <div key={item.id} className="bg-white rounded-lg overflow-hidden shadow-md transition transform hover:-translate-y-1 hover:shadow-xl">
                 <img 
                   src={item.image} 

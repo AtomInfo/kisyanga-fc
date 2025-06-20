@@ -1,3 +1,4 @@
+import { historyData } from '@/data/history';
 import { useQuery } from '@tanstack/react-query';
 
 interface HistoryEvent {
@@ -39,7 +40,7 @@ export default function HistorySection() {
                 </div>
               ))
             ) : (
-              historyEvents?.map((event, index) => (
+              historyData?.map((event, index) => (
                 <div key={event.id} className="relative">
                   {/* Year marker */}
                   <div className="absolute left-1/2 transform -translate-x-1/2 -top-4 w-8 h-8 bg-secondary rounded-full flex items-center justify-center z-10">

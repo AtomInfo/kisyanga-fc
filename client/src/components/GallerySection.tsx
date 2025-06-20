@@ -1,6 +1,7 @@
 import { useQuery } from '@tanstack/react-query';
 import { useState } from 'react';
 import { Dialog, DialogContent } from "@/components/ui/dialog";
+import { galleryData } from '@/data/gallery';
 
 interface GalleryImage {
   id: number;
@@ -32,7 +33,7 @@ export default function GallerySection() {
               </div>
             ))
           ) : (
-            galleryImages?.map((image) => (
+            galleryData?.map((image) => (
               <div 
                 key={image.id} 
                 className="relative overflow-hidden rounded-lg group cursor-pointer"
