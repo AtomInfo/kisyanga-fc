@@ -51,29 +51,33 @@ export default function Footer() {
             </p>
             <div className="flex space-x-4">
               <a
+                target="_blank"
                 href="https://instagram.com/kisyanga_fc"
                 className="text-gray-300 hover:text-secondary transition"
               >
                 <i className="fab fa-instagram text-xl"></i>
               </a>
               <a
+                target="_blank"
                 href="https://twitter.com/kisyangafc"
                 className="text-gray-300 hover:text-secondary transition"
               >
                 <i className="fab fa-twitter text-xl"></i>
               </a>
-              <a
+              {/* <a
+                target="_blank"
                 href="#"
                 className="text-gray-300 hover:text-secondary transition"
               >
                 <i className="fab fa-facebook-f text-xl"></i>
               </a>
               <a
+                target="_blank"
                 href="#"
                 className="text-gray-300 hover:text-secondary transition"
               >
                 <i className="fab fa-youtube text-xl"></i>
-              </a>
+              </a> */}
             </div>
           </div>
 

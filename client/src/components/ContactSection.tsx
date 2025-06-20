@@ -215,7 +215,7 @@ export default function ContactSection() {
                   >
                     <i className="fab fa-twitter"></i>
                   </a>
-                  <a
+                  {/* <a
                     target="_blank"
                     href="#"
                     className="w-10 h-10 bg-primary text-white rounded-full flex items-center justify-center hover:bg-accent transition"
@@ -228,7 +228,7 @@ export default function ContactSection() {
                     className="w-10 h-10 bg-primary text-white rounded-full flex items-center justify-center hover:bg-accent transition"
                   >
                     <i className="fab fa-youtube"></i>
-                  </a>
+                  </a> */}
                 </div>
               </div>
 
