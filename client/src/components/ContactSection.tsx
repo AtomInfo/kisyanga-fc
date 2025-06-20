@@ -1,36 +1,31 @@
 import { useState } from 'react';
+import { useForm } from 'react-hook-form';
 import axios from 'axios';
 
 export default function ContactSection() {
-  const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    subject: '',
-    message: ''
-  });
+  const {
+    register,
+    handleSubmit,
+    reset,
+    formState: { errors }
+  } = useForm<{ name: string; email: string; subject: string; message: string }>();
   const [loading, setLoading] = useState(false);
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-    const { id, value } = e.target;
-    setFormData(prev => ({ ...prev, [id]: value }));
-  };
-
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
+  const onSubmit = async (data: { name: string; email: string; subject: string; message: string }) => {
     setLoading(true);
-    try {
-      await axios.post('http://localhost:5000/api/v1/settings/message', {
-        ...formData,
-        sheet: "Kisyanga Contact Us"
-      });
-      // alert('Thank you for your message! We will get back to you soon.');
-      setFormData({ name: '', email: '', subject: '', message: '' });
-    } catch (error) {
-      // alert('Failed to send message. Please try again later.');
-      console.error('Message send failed:', error);
-    } finally {
-      setLoading(false);
-    }
+    // try {
+    //   await axios.post('http://localhost:5000/api/v1/settings/message', {
+    //     ...data,
+    //     sheet: "Kisyanga Contact Us"
+    //   });
+    //   // Optionally show a success message here
+    //   reset();
+    // } catch (error) {
+    //   // Optionally handle error here
+    //   console.error('Message send failed:', error);
+    // } finally {
+    //   setLoading(false);
+    // }
   };
 
   return (
@@ -43,18 +38,19 @@ export default function ContactSection() {
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           <div className="order-2 md:order-1">
-            <form onSubmit={handleSubmit}>
+            <form onSubmit={handleSubmit(onSubmit)}>
               <div className="mb-4">
                 <label htmlFor="name" className="block text-gray-700 font-semibold mb-2">Full Name</label>
                 <input
                   type="text"
                   id="name"
                   className="w-full px-4 py-3 rounded-md border border-gray-300 focus:outline-none focus:ring-2 focus:ring-primary"
-                  value={formData.name}
-                  onChange={handleChange}
-                  required
+                  {...register('name', { required: 'Full name is required' })}
                   disabled={loading}
                 />
+                {errors.name && (
+                  <span className="text-red-400 text-sm">{errors.name.message}</span>
+                )}
               </div>
 
               <div className="mb-4">
@@ -63,11 +59,18 @@ export default function ContactSection() {
                   type="email"
                   id="email"
                   className="w-full px-4 py-3 rounded-md border border-gray-300 focus:outline-none focus:ring-2 focus:ring-primary"
-                  value={formData.email}
-                  onChange={handleChange}
-                  required
+                  {...register('email', {
+                    required: 'Email is required',
+                    pattern: {
+                      value: /^[^\s@]+@[^\s@]+\.[^\s@]+$/,
+                      message: 'Invalid email address'
+                    }
+                  })}
                   disabled={loading}
                 />
+                {errors.email && (
+                  <span className="text-red-400 text-sm">{errors.email.message}</span>
+                )}
               </div>
 
               <div className="mb-4">
@@ -76,11 +79,12 @@ export default function ContactSection() {
                   type="text"
                   id="subject"
                   className="w-full px-4 py-3 rounded-md border border-gray-300 focus:outline-none focus:ring-2 focus:ring-primary"
-                  value={formData.subject}
-                  onChange={handleChange}
-                  required
+                  {...register('subject', { required: 'Subject is required' })}
                   disabled={loading}
                 />
+                {errors.subject && (
+                  <span className="text-red-400 text-sm">{errors.subject.message}</span>
+                )}
               </div>
 
               <div className="mb-6">
@@ -89,11 +93,12 @@ export default function ContactSection() {
                   id="message"
                   rows={4}
                   className="w-full px-4 py-3 rounded-md border border-gray-300 focus:outline-none focus:ring-2 focus:ring-primary"
-                  value={formData.message}
-                  onChange={handleChange}
-                  required
+                  {...register('message', { required: 'Message is required' })}
                   disabled={loading}
                 ></textarea>
+                {errors.message && (
+                  <span className="text-red-400 text-sm">{errors.message.message}</span>
+                )}
               </div>
 
               <button

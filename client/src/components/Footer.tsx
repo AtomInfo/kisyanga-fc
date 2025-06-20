@@ -2,24 +2,26 @@ import { scrollToSection } from '@/lib/utils';
 import { useState } from 'react';
 import axios from 'axios';
 import kisyangaLogo from '../assets/kisyanga-logo.jpg';
+import { useForm } from 'react-hook-form';
 
 export default function Footer() {
-  const [email, setEmail] = useState('');
   const [loading, setLoading] = useState(false);
+  const {
+    register,
+    handleSubmit,
+    reset,
+    formState: { errors }
+  } = useForm<{ email: string }>();
 
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-    // setLoading(true);
+  const onSubmit = async (data: { email: string }) => {
+    setLoading(true);
     // try {
     //   await axios.post('http://localhost:5000/api/v1/settings/subscribe', {
-    //     email,
+    //     email: data.email,
     //     sheet: "Kisyanga Subscriptions"
     //   });
-    //   // Optionally show a success message here
-    //   setEmail('');
+    //   reset();
     // } catch (error) {
-    //   setEmail('');
-    //   // Optionally handle error here
     //   console.error('Subscription failed:', error);
     // } finally {
     //   setLoading(false);
@@ -102,16 +104,23 @@ export default function Footer() {
           <div>
             <h3 className="font-bold text-lg mb-4">Newsletter</h3>
             <p className="text-gray-300 mb-4">Subscribe to our newsletter for the latest updates and exclusive content.</p>
-            <form onSubmit={handleSubmit} className="flex flex-col space-y-2">
+            <form onSubmit={handleSubmit(onSubmit)} className="flex flex-col space-y-2">
               <input
                 type="email"
                 placeholder="Your email address"
                 className="px-4 py-2 rounded-md focus:outline-none focus:ring-2 focus:ring-secondary text-gray-800"
-                value={email}
-                onChange={(e) => setEmail(e.target.value)}
-                required
+                {...register('email', {
+                  required: 'Email is required',
+                  pattern: {
+                    value: /^[^\s@]+@[^\s@]+\.[^\s@]+$/,
+                    message: 'Invalid email address'
+                  }
+                })}
                 disabled={loading}
               />
+              {errors.email && (
+                <span className="text-red-400 text-sm">{errors.email.message}</span>
+              )}
               <button
                 type="submit"
                 className="bg-secondary text-primary font-bold py-2 px-4 rounded-md hover:bg-accent transition"
