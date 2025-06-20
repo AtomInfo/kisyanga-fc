@@ -18,13 +18,13 @@ export const productsData = [
     name: 'Kisyanga FC Scarf',
     description: 'Green & Gold Match Day Scarf',
     price: 'UGX 90,000',
-    image: 'https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=400&h=400&fit=crop&crop=center'
+    image: 'https://www.endorse256services.co.ug/images/scarf.png?w=400&h=400&fit=crop&crop=center'
   },
   {
     id: 4,
     name: 'Kisyanga FC Mug',
     description: 'Golden Basya Coffee Mug',
     price: 'UGX 55,000',
-    image: 'https://www.endorse256services.co.ug/images/mug.png?w=400&h=400&fit=crop&crop=center'
+    image: 'https://www.endorse256services.co.ug/images/mug.png?w=400&h=400&fit=crop&crop=face'
   }
 ];

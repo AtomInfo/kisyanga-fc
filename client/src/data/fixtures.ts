@@ -64,13 +64,13 @@ export const fixturesData = [
     type: 'result',
     date: 'Sunday, April 24, 2023',
     homeTeam: {
-      name: 'Royal Lions',
-      shortName: 'RL',
+      name: 'Kajogo FC',
+      shortName: 'KAJ',
       logo: ''
     },
     awayTeam: {
-      name: 'Kajogo FC',
-      shortName: 'KAJ',
+      name: 'Kisyanga FC',
+      shortName: 'KFC',
       logo: ''
     },
     homeScore: 2,
