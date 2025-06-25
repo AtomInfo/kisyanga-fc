@@ -1,6 +1,8 @@
 import { productsData } from '@/data/products';
 import { useQuery } from '@tanstack/react-query';
 import { useState } from 'react';
+import { useForm } from 'react-hook-form';
+import axios from 'axios';
 
 interface Product {
   id: number;
@@ -11,17 +13,29 @@ interface Product {
 }
 
 export default function ShopSection() {
-  const [email, setEmail] = useState('');
-  
   const { data: products, isLoading } = useQuery<Product[]>({
     queryKey: ['/api/products'],
   });
 
-  const handleNotify = (e: React.FormEvent) => {
-    e.preventDefault();
-    // This would normally connect to a newsletter API
-    alert(`Thank you! We'll notify ${email} when our shop launches.`);
-    setEmail('');
+  const {
+    register,
+    handleSubmit,
+    reset,
+    formState: { errors, isSubmitting }
+  } = useForm<{ email: string }>();
+
+  const onSubmit = async (data: { email: string }) => {
+    try {
+      await axios.post('http://localhost:5000/api/v1/settings/subscribe', {
+        email: data.email,
+        sheet: "Kisyanga Shop Notify"
+      });
+      alert(`Thank you! We'll notify ${data.email} when our shop launches.`);
+      reset();
+    } catch (error) {
+      alert('Failed to subscribe. Please try again later.');
+      console.error(error);
+    }
   };
 
   return (
@@ -72,19 +86,31 @@ export default function ShopSection() {
         
         <div className="text-center mt-10">
           <p className="text-gray-600 mb-4">Our online shop is currently under development. Leave your email to be notified when we launch!</p>
-          <form onSubmit={handleNotify} className="max-w-md mx-auto flex flex-col sm:flex-row gap-2">
+          <form onSubmit={handleSubmit(onSubmit)} className="max-w-md mx-auto flex flex-col sm:flex-row gap-2">
             <input 
               type="email" 
               placeholder="Enter your email address" 
-              className="flex-1 px-4 py-3 rounded-md border border-gray-300 focus:outline-none focus:ring-2 focus:ring-primary" 
-              value={email}
-              onChange={(e) => setEmail(e.target.value)}
-              required
+              className="flex-1 px-4 py-3 rounded-md border border-gray-300 focus:outline-none focus:ring-2 focus:ring-primary"
+              {...register('email', {
+                required: 'Email is required',
+                pattern: {
+                  value: /^[^\s@]+@[^\s@]+\.[^\s@]+$/,
+                  message: 'Invalid email address'
+                }
+              })}
+              disabled={isSubmitting}
             />
-            <button type="submit" className="bg-primary text-white font-bold py-3 px-6 rounded-md hover:bg-primary/90 transition">
-              Notify Me
+            <button
+              type="submit"
+              className="bg-primary text-white font-bold py-3 px-6 rounded-md hover:bg-primary/90 transition"
+              disabled={isSubmitting}
+            >
+              {isSubmitting ? 'Submitting...' : 'Notify Me'}
             </button>
           </form>
+          {errors.email && (
+            <span className="text-red-400 text-sm block mt-2">{errors.email.message}</span>
+          )}
         </div>
       </div>
     </section>
