@@ -13,9 +13,7 @@ interface Product {
 }
 
 export default function ShopSection() {
-  const { data: products, isLoading } = useQuery<Product[]>({
-    queryKey: ['/api/products'],
-  });
+  const [isLoading, setLoading] = useState(false);
 
   const {
     register,
@@ -25,17 +23,22 @@ export default function ShopSection() {
   } = useForm<{ email: string }>();
 
   const onSubmit = async (data: { email: string }) => {
-    try {
-      await axios.post('http://localhost:5000/api/v1/settings/subscribe', {
-        email: data.email,
-        sheet: "Kisyanga Shop Notify"
-      });
-      alert(`Thank you! We'll notify ${data.email} when our shop launches.`);
-      reset();
-    } catch (error) {
-      alert('Failed to subscribe. Please try again later.');
-      console.error(error);
-    }
+    setLoading(true);
+    // try {
+    //   await axios.post('http://localhost:5000/api/v1/settings/subscribe', {
+    //     email: data.email,
+    //     sheet: "Kisyanga Shop Notify"
+    //   });
+    //   alert(`Thank you! We'll notify ${data.email} when our shop launches.`);
+    //   reset();
+    // } catch (error) {
+    //   // alert('Failed to subscribe. Please try again later.');
+    //   console.error(error);
+    // }
+
+    setTimeout(() => {
+      setLoading(false);
+    }, 1000); // 1000 milliseconds = 1 seconds
   };
 
   return (
@@ -47,7 +50,7 @@ export default function ShopSection() {
         </p>
         
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-          {isLoading ? (
+          {false ? (
             // Loading skeleton
             Array.from({ length: 4 }).map((_, index) => (
               <div key={index} className="bg-gray-100 rounded-lg overflow-hidden shadow-md p-4 animate-pulse">
@@ -92,20 +95,20 @@ export default function ShopSection() {
               placeholder="Enter your email address" 
               className="flex-1 px-4 py-3 rounded-md border border-gray-300 focus:outline-none focus:ring-2 focus:ring-primary"
               {...register('email', {
-                required: 'Email is required',
+                // required: 'Email is required',
                 pattern: {
                   value: /^[^\s@]+@[^\s@]+\.[^\s@]+$/,
                   message: 'Invalid email address'
                 }
               })}
-              disabled={isSubmitting}
+              disabled={isLoading}
             />
             <button
               type="submit"
               className="bg-primary text-white font-bold py-3 px-6 rounded-md hover:bg-primary/90 transition"
-              disabled={isSubmitting}
+              disabled={isLoading}
             >
-              {isSubmitting ? 'Submitting...' : 'Notify Me'}
+              {isLoading ? 'Submitting...' : 'Notify Me'}
             </button>
           </form>
           {errors.email && (
